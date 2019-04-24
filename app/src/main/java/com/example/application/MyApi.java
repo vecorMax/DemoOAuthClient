@@ -4,6 +4,8 @@ import com.github.scribejava.core.builder.api.DefaultApi20;
 
 public class MyApi extends DefaultApi20 {
 
+    private static String TOKEN = "http://192.168.1.102:8080/uaa/oauth/token";
+
     public MyApi() {}
 
     private static class InstanceHolder {
@@ -16,12 +18,12 @@ public class MyApi extends DefaultApi20 {
 
     @Override
     public String getAccessTokenEndpoint() {
-        return "http://192.168.1.102:8080/uaa/oauth/token";
+        return TOKEN;
     }
 
     @Override
     protected String getAuthorizationBaseUrl() {
-        return null;
+        return "URL";
     }
 
 
